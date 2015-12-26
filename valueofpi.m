@@ -1,11 +1,7 @@
 clc
-%rng(0,'v5uniform');
-%ang = 0:0.000001:pi/2;
 N = 10000;
 u = rand(1,N);
 v = rand(1,N);
-%xp = cos(ang);
-%yp = sin(ang);
 count = 0;
 for idx = 1:N
     if u(idx)^2 + v(idx)^2 <= 1
@@ -22,3 +18,4 @@ hold on
 plot(x2p,y2p,'r.');
 hold off
 pi_new = 4*(count/N);
+legend(strcat('pi value = ', num2str(pi_new)));
